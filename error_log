@@ -1,0 +1,22 @@
+[01-Mar-2017 08:10:24 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/affeno/public_html/prosjekt/sendmoney.php:33) in /home/affeno/public_html/prosjekt/sendmoney.php on line 34
+[01-Mar-2017 08:11:10 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/affeno/public_html/prosjekt/sendmoney.php:33) in /home/affeno/public_html/prosjekt/sendmoney.php on line 34
+[01-Mar-2017 08:11:20 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/affeno/public_html/prosjekt/sendmoney.php:33) in /home/affeno/public_html/prosjekt/sendmoney.php on line 34
+[01-Mar-2017 08:12:05 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/affeno/public_html/prosjekt/sendmoney.php:33) in /home/affeno/public_html/prosjekt/sendmoney.php on line 34
+[01-Mar-2017 08:12:39 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/affeno/public_html/prosjekt/sendmoney.php:33) in /home/affeno/public_html/prosjekt/sendmoney.php on line 34
+[01-Mar-2017 08:13:12 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/affeno/public_html/prosjekt/sendmoney.php:33) in /home/affeno/public_html/prosjekt/sendmoney.php on line 34
+[01-Mar-2017 08:13:12 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/affeno/public_html/prosjekt/sendmoney.php:33) in /home/affeno/public_html/prosjekt/sendmoney.php on line 34
+[02-Mar-2017 06:18:34 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:18:57 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:19:50 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:19:56 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:20:33 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:21:22 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:24:16 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:24:37 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:25:09 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:25:52 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:25:53 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:26:00 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:26:38 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:26:51 America/Chicago] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/affeno/public_html/prosjekt/resources/functions.php on line 88
+[02-Mar-2017 06:27:24 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/affeno/public_html/prosjekt/api.php on line 59
