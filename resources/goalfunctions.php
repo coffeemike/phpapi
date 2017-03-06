@@ -36,6 +36,35 @@ function insertAccount($userid, $goalname) {
     $stmt->close();
 }
 
+// Hente ut accounten som nettopp ble laget.
+function getAccount($userid) {
+    global $con;
+    
+    $stmt = $con->prepare("SELECT id FROM account WHERE owner_id = ? ORDER BY id DESC LIMIT 1");
+    $stmt->bind_param("i", $userid);
+    
+    $userid = $userid;
+    
+    $stmt->execute();
+    
+    $stmt->store_result();
+    if ($stmt->num_rows < 1) {
+        return 0;
+        $stmt->free_result();
+        $stmt->close();
+    }
+    $stmt->bind_result($dbaccount);
+    
+    while ($row = $stmt->fetch()) {
+        return $dbaccount;
+        $stmt->free_result();
+        $stmt->close();
+    }
+    
+    $stmt->free_result();
+    $stmt->close();
+}
+
 // Lager en rad i goals med sparemål.
 function insertGoal($datetime, $account, $goalname, $amount) {
     global $con;
