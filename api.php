@@ -1,6 +1,7 @@
 <?php
 
 include_once "resources/sendfunctions.php";
+include_once "resources/goalfunctions.php";
 
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
@@ -20,14 +21,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 // Test
-$test = array(1 => "Verdi 1", 2=> "Verdi 2");
+$test = array(
+    'per' => array('amount' => "200", 'goal' => "1000"),
+    'rolf' => array('amount' => "10", 'goal' => "1500")
+    );
 
 $postdata = file_get_contents("php://input");
 
 if (isset($postdata)) {
     $request = json_decode($postdata);
     
-    echo "Action = " . $request->action . ". Array = " . $test;
+    $acc = getGoals(3);
+    
+    echo json_encode($acc);
     //echo '<input type="button" value="Trykk her for faen">';
     die();
     
@@ -72,7 +78,15 @@ if (isset($postdata)) {
     
     // Opprette sparemål
     if ($action == 2) {
+        if (isset($request->name)) {
+            $name = $request->name;
+        }
         
+        if (isset($request->amount)) {
+            $amount = $request->amount;
+        }
+        
+        echo createGoal(3, $name, $amount) . " name: " . $name . ". Amount: " . $amount;
     }
     
     

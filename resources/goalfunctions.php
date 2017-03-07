@@ -11,37 +11,31 @@ include_once "db_con.php";
 
 // Samle funksjon for å lage et sparemål.
 function createGoal($userid, $goaldesc, $goalamount) {
-    echo "Du har oppretta sparemål!";
+    insertAccount($userid, $goaldesc);
+    $account = getAccount($userid);
+    if ($account == 0) return "En feil oppstod";
+    insertGoal($account, $goaldesc, $goalamount);
+    return "Sparemål oppretta!";
 }
 
 // Henter ut alle goals basert på brukerid.
 function getGoals($userid) {
     global $con;
+    $usid = mysqli_real_escape_string($con, $userid);
+    $sql = "SELECT account.id AS id, goals.goal_name AS name, goals.goal AS goal, account.amount AS oppspart FROM goals JOIN account ON goals.account_id = account.id WHERE account.owner_id = '$usid'";
 
-    $stmt = $con->prepare("SELECT * FROM goals JOIN account ON goals.account_id = account.id WHERE account.owner_id = ?");
-    $stmt->bind_param("i", $userid);
+    $res = mysqli_query($con, $sql);
     
-    $userid = $userid;
-
-    $stmt->execute();
-
-    $stmt->store_result();
-    
-    if ($stmt->num_rows < 1) {
+    if (mysqli_num_rows($res) < 1) {
         return 0;
-        $stmt->free_result();
-        $stmt->close();
-    }
-    $stmt->bind_result($goalResult);
-    
-    while ($row = $stmt->fetch()) {
-        return $goalResult;
-        $stmt->free_result();
-        $stmt->close();
     }
     
-    $stmt->free_result();
-    $stmt->close();
+    $arr[] = array();
+    $cnt = 0;
+    while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+        $arr[] = $row;
+    }
+    echo json_encode($arr);
 }
 
 // Lager en rad i accounts med sparemål.
