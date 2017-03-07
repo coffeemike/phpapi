@@ -10,7 +10,7 @@
 include_once "db_con.php";
 
 // Samle funksjon for å lage et sparemål.
-function createGoal() {
+function createGoal($userid, $goaldesc, $goalamount) {
     echo "Du har oppretta sparemål!";
 }
 
