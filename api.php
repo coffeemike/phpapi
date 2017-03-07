@@ -20,14 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 // Test
-$test = array("Verdi 1", "Verdi 2");
+$test = array(1 => "Verdi 1", 2=> "Verdi 2");
 
 $postdata = file_get_contents("php://input");
 
 if (isset($postdata)) {
     $request = json_decode($postdata);
     
-    echo $test;
+    echo "Action = " . $request->action . ". Array = " . $test;
+    //echo '<input type="button" value="Trykk her for faen">';
     die();
     
     // Gjør ikke noe enda.
