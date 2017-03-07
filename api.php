@@ -20,12 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 // Test
-//$test = array("Verdi 1", "Verdi 2");
+$test = array("Verdi 1", "Verdi 2");
 
 $postdata = file_get_contents("php://input");
 
 if (isset($postdata)) {
     $request = json_decode($postdata);
+    
+    echo $test;
+    die();
     
     // Gjør ikke noe enda.
     if (isset($request->action)) {
