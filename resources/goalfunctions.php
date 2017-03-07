@@ -15,8 +15,33 @@ function createGoal($userid, $goaldesc, $goalamount) {
 }
 
 // Henter ut alle goals basert på brukerid.
-function getGoals() {
+function getGoals($userid) {
+    global $con;
+
+    $stmt = $con->prepare("SELECT * FROM goals JOIN account ON goals.account_id = account.id WHERE account.owner_id = ?");
+    $stmt->bind_param("i", $userid);
     
+    $userid = $userid;
+
+    $stmt->execute();
+
+    $stmt->store_result();
+    
+    if ($stmt->num_rows < 1) {
+        return 0;
+        $stmt->free_result();
+        $stmt->close();
+    }
+    $stmt->bind_result($goalResult);
+    
+    while ($row = $stmt->fetch()) {
+        return $goalResult;
+        $stmt->free_result();
+        $stmt->close();
+    }
+    
+    $stmt->free_result();
+    $stmt->close();
 }
 
 // Lager en rad i accounts med sparemål.
