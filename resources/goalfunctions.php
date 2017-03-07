@@ -66,7 +66,7 @@ function getAccount($userid) {
 }
 
 // Lager en rad i goals med sparemål.
-function insertGoal($datetime, $account, $goalname, $amount) {
+function insertGoal($account, $goalname, $amount) {
     global $con;
     
     $stmt = $con->prepare("INSERT INTO goals (account_id, goal, created, goal_name) VALUES (?, ?, ?, ?)");

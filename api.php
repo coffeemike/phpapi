@@ -27,11 +27,9 @@ $postdata = file_get_contents("php://input");
 if (isset($postdata)) {
     $request = json_decode($postdata);
     
-    $request->
-    
     // Gjør ikke noe enda.
     if (isset($request->action)) {
-        $action = $request-action;
+        $action = $request->action;
     }
     else {
         echo "En feil oppstod";
