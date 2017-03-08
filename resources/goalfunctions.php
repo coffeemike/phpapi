@@ -31,7 +31,6 @@ function getGoals($userid) {
     }
     
     $arr = array();
-    $cnt = 0;
     while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
         $arr[] = $row;
     }

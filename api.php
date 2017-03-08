@@ -20,29 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-// Test
-$test = array(
-    'per' => array('amount' => "200", 'goal' => "1000"),
-    'rolf' => array('amount' => "10", 'goal' => "1500")
-    );
-
 $postdata = file_get_contents("php://input");
 
 if (isset($postdata)) {
     $request = json_decode($postdata);
-    
-    $acc = getGoals(3);
-    
-    echo json_encode($acc);
-    //echo '<input type="button" value="Trykk her for faen">';
-    die();
     
     // Gjør ikke noe enda.
     if (isset($request->action)) {
         $action = $request->action;
     }
     else {
-        echo "En feil oppstod";
+        echo "Action er ikke satt";
         die();
     }
     
@@ -87,6 +75,13 @@ if (isset($postdata)) {
         }
         
         echo createGoal(3, $name, $amount) . " name: " . $name . ". Amount: " . $amount;
+    }
+    
+    if ($action == 3) {
+        $acc = getGoals(3);
+        echo json_encode($acc);
+        //echo $action;
+        die();
     }
     
     
