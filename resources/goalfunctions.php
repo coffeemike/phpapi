@@ -117,8 +117,8 @@ function deleteUser($account_id) {
 function deleteGoal($account_id) {
     global $con;
 
-    $stmt = $con->prepare("DELETE FROM goals WHERE id = ?");
-    $stmt->bind_param("i", $id);
+    $stmt = $con->prepare("DELETE FROM goals WHERE account_id = ?");
+    $stmt->bind_param("i", $account_id);
 
     $stmt->execute();
 
