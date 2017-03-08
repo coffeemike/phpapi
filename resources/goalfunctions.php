@@ -114,6 +114,18 @@ function deleteUser($account_id) {
     $stmt->close();
 }
 
+function deleteGoal($account_id) {
+    global $con;
+
+    $stmt = $con->prepare("DELETE FROM goals WHERE id = ?");
+    $stmt->bind_param("i", $id);
+
+    $stmt->execute();
+
+    $stmt->free_result();
+    $stmt->close();
+}
+
 function checkOwner($userid, $accountid) {
     global $con;
     
@@ -139,4 +151,5 @@ function checkOwner($userid, $accountid) {
     $stmt->close();
     return 2;
 }
+
 ?>
