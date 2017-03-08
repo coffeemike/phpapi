@@ -102,11 +102,11 @@ function insertGoal($account, $goalname, $amount) {
 
 //Under denne linjen begynner funksjonene for å slette kontoer og mål.
 
-function deleteUser($account_id) {
+function deleteUser($accountid) {
     global $con;
     
     $stmt = $con->prepare("DELETE FROM account WHERE id = ?");
-    $stmt->bind_param("i", $account_id);
+    $stmt->bind_param("i", $accountid);
 
     $stmt->execute();
 
@@ -120,10 +120,14 @@ function deleteGoal($account_id) {
     $stmt = $con->prepare("DELETE FROM goals WHERE account_id = ?");
     $stmt->bind_param("i", $account_id);
 
+    $account_id = $account_id;
+    
     $stmt->execute();
 
     $stmt->free_result();
     $stmt->close();
+
+    
 }
 
 function checkOwner($userid, $accountid) {
@@ -144,8 +148,8 @@ function checkOwner($userid, $accountid) {
     
     while ($row = $stmt->fetch()) {
         if ($dbamount < 0) {
-            $stmt = $con->prepare("UPDATE account(3) SET amount = amount + $dbamount WHERE owner_id = 4");
-            $stmt->execute();
+            //$stmt = $con->prepare("UPDATE account(3) SET amount = amount + $dbamount WHERE owner_id = 4");
+            //$stmt->execute();
             return 1;
         }
     }

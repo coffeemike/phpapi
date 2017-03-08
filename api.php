@@ -84,6 +84,9 @@ if (isset($postdata)) {
         die();
     }
     
+    if ($action == 4) {
+        echo deleteGoal($account_id) . " deleted: " . $account_id;
+    }
     
 }
 else {
