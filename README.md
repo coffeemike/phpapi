@@ -1,2 +1,25 @@
-<h1>PhpApi for prosjekt.</h1>
-<h3>Tillater kommunikasjon mellom mobilapplikasjon, database, og “sparegris”.</h3>
+# Spoink PHP-API
+
+API for connecting the database with the mobile application.
+
+## Prerequisites
+
+```
+Use MySQLWorkbench for configuring the database tables.
+```
+
+## Running the tests
+
+Paste the functions you want to test in the testFunc-file and run on localhost.
+
+```
+Example: echo getGoals(3);
+```
+
+## Authors
+
+* **Alf Henrik Langaas**
+* **Mikkel Fjeld**
+* **Erlend Birketvedt**
+
+
