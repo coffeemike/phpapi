@@ -2,6 +2,7 @@
 
 include_once "resources/sendfunctions.php";
 include_once "resources/goalfunctions.php";
+include_once "resources/loginfunctions.php";
 
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
@@ -74,7 +75,7 @@ if (isset($postdata)) {
             $amount = $request->amount;
         }
         
-        echo createGoal(3, $name, $amount) . " name: " . $name . ". Amount: " . $amount;
+        echo createGoal(3, $name, $amount);
     }
     
     if ($action == 3) {
@@ -85,7 +86,18 @@ if (isset($postdata)) {
     }
     
     if ($action == 4) {
-        echo deleteGoal($account_id) . " deleted: " . $account_id;
+        if (isset($request->account_id)) {
+            $account_id = $request->account_id;
+        }
+        echo removeGoalAcc(3, $account_id);
+    }
+    
+    if ($action == 5) {
+        if (isset($request->email)) {
+            $email = $request->email;
+            $pass = $requst->password;
+        }
+        echo checkLogin($email, $pass);
     }
     
 }

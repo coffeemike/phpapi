@@ -39,7 +39,7 @@ function sendMoney($userid, $sender, $reciever, $amount) {
     // Legger til penger på mottakers konto
     addMoney($reciever, $amount);
     
-    return "Du har spart : " . $amount . ",-";
+    return $amount;
 }
 
 // Loggfører transaksjoner i eget table.

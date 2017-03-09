@@ -6,6 +6,6 @@ include_once "resources/goalfunctions.php";
 //insertTransactions(5,2,1333.9);
 //echo sendMoney(3, 4, 555);
 
-deleteGoal(23);
+echo removeGoalAcc(3, 33);
 echo "LOLz";
 ?>
