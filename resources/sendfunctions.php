@@ -123,4 +123,26 @@ function checkOwnerCash($userid, $sender, $amount) {
     return 2;
 }
 
+function getTransactions($userid) {
+    global $con;
+    $usid = mysqli_real_escape_string($con, $userid);
+    $sql = "SELECT transactions.id AS id, a1.name AS sendername, a2.name AS recievername, transactions.amount AS amount, transactions.datetime FROM transactions
+JOIN account a1 ON transactions.sender_id = a1.id
+JOIN account a2 ON transactions.reciever_id = a2.id
+WHERE a1.owner_id = '$usid'";
+
+    $res = mysqli_query($con, $sql);
+    
+    if (mysqli_num_rows($res) < 1) {
+        return 0;
+    }
+    
+    $arr = array();
+    while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+        $arr[] = $row;
+        
+    }
+    echo json_encode($arr);
+}
+
 ?>

@@ -57,7 +57,7 @@ if (isset($postdata)) {
         }
 
         if ($amount == "") {
-            echo "Venligst skriv inn hvor mye du vil spare.";
+            echo "Vennligst skriv inn hvor mye du vil spare.";
         //echo $test;
             return 0;
         }
@@ -128,6 +128,15 @@ if (isset($postdata)) {
         echo registerUser($email, $pass, $passrep, $name, $ssn);
     }
     
+    
+    if ($action == 7) {
+        if (isset($request->userid)) {
+            $userid = $request->userid;
+        }
+        $acc = getGoals($userid);
+        echo json_encode($acc);
+        die();
+    }
 }
 else {
     echo "En feil oppstod!";
