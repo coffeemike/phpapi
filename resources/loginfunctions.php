@@ -1,6 +1,6 @@
 <?php
 
-include_once "db_con";
+include_once "db_con.php";
 
 function checkLogin($email, $password) {
     global $con;
@@ -26,6 +26,27 @@ function checkLogin($email, $password) {
     }
     $stmt->free_result();
     $stmt->close();
+}
+
+function registerUser($email, $password, $passwordrep, $name, $ssn) {
+    global $con;
+    
+    $stmt = $con->prepare("INSERT INTO users (name, email, password, ssn) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $name, $email, $password, $ssn);
+    
+    $email = $email;
+    $password = $password;
+    $passwordrep = $passwordrep;
+    $name = $name;
+    $ssn = $ssn;
+    
+    if ($password != $passwordrep) return "Passordene matcher ikke.";
+    
+    
+    $stmt->execute();
+    $stmt->free_result();
+    $stmt->close();
+    return "Registrert!";
 }
 
 ?>

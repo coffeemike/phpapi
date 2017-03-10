@@ -75,13 +75,20 @@ if (isset($postdata)) {
             $amount = $request->amount;
         }
         
-        echo createGoal(3, $name, $amount);
+        if (isset($request->userid)) {
+            $userid = $request->userid;
+        }
+        
+        echo createGoal($userid, $name, $amount);
     }
     
+    // Henter ut alle sparemål
     if ($action == 3) {
-        $acc = getGoals(3);
+        if (isset($request->userID)) {
+            $userid = $request->userID;
+        }
+        $acc = getGoals($userid);
         echo json_encode($acc);
-        //echo $action;
         die();
     }
     
@@ -95,9 +102,30 @@ if (isset($postdata)) {
     if ($action == 5) {
         if (isset($request->email)) {
             $email = $request->email;
-            $pass = $requst->password;
+        }
+        if (isset($request->password)) {
+            $pass = $request->password;
         }
         echo checkLogin($email, $pass);
+    }
+    
+    if ($action == 6) {
+        if (isset($request->email)) {
+            $email = $request->email;
+        }
+        if (isset($request->pass)) {
+            $pass = $request->pass;
+        }
+        if (isset($request->passrep)) {
+            $passrep = $request->passrep;
+        }
+        if (isset($request->name)) {
+            $name = $request->name;
+        }
+        if (isset($request->ssn)) {
+            $ssn = $request->ssn;
+        }
+        echo registerUser($email, $pass, $passrep, $name, $ssn);
     }
     
 }
