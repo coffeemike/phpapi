@@ -1,9 +1,24 @@
 <?php
 
+/*
+*
+* Action:
+* 1 = Send Penger
+* 2 = Opprette sparemål
+* 3 = Hente ut alle sparemål
+* 4 = Slette et sparemål
+* 5 = Sjekker login
+* 6 = Sjekker registrering
+* 7 = Henter ut alle transaksjoner til en person.
+*
+*/
+
+// Funksjonsfiler inkluderes
 include_once "resources/sendfunctions.php";
 include_once "resources/goalfunctions.php";
 include_once "resources/loginfunctions.php";
 
+// Initialiserer APIet.
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
     header('Access-Control-Allow-Credentials: true');
@@ -21,12 +36,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
+// Raw JSON data fra appen
 $postdata = file_get_contents("php://input");
 
 if (isset($postdata)) {
+    
+    // Dekoder json dataen
     $request = json_decode($postdata);
     
-    // Gjør ikke noe enda.
+    // Sjekker om action er satt
     if (isset($request->action)) {
         $action = $request->action;
     }
@@ -35,9 +53,11 @@ if (isset($postdata)) {
         die();
     }
     
-    // TODO: Sjekk action, og kjør den riktige funksjonen basert på det
-    // Feks. Hvis vi får inn action=1, så vet vi at brukeren prøver å overføre penger til konto. Dermed kjører vi den funksjonen.
-    // Hvis vi får inn action=2, så vet vi at man prøver å opprette sparemål.
+    // Sjekker om vi har kontakt med databasen.
+    if (checkDBCon($con) == 1) {
+        echo "Får ikke kontakt med databasen.";
+        return 0;
+    }
     
     // Spare penger.
     if ($action == 1) {
@@ -50,18 +70,12 @@ if (isset($postdata)) {
         if (isset($request->reciever)) {
             $reciever = $request->reciever;
         }
-    
-        if (checkDBCon($con) == 1) {
-            echo "Får ikke kontakt med databasen.";
-            return 0;
-        }
-
+        // Hvis man ikke skriver inn antall kroner man vil sende, får man respons.
         if ($amount == "") {
             echo "Vennligst skriv inn hvor mye du vil spare.";
-        //echo $test;
             return 0;
         }
-    
+        // Kjører funksjonene som overfører penger.
         echo sendMoney(3, $sender, $reciever, $amount);
     }
     
@@ -78,7 +92,7 @@ if (isset($postdata)) {
         if (isset($request->userid)) {
             $userid = $request->userid;
         }
-        
+        // Kjører funksjonen som lager nytt sparemål
         echo createGoal($userid, $name, $amount);
     }
     
@@ -87,11 +101,15 @@ if (isset($postdata)) {
         if (isset($request->userID)) {
             $userid = $request->userID;
         }
+        // Lager et array som inneholder alle sparemål til en bruker
         $acc = getGoals($userid);
+        
+        // Gjør om arrayet til json format og sender det i respons
         echo json_encode($acc);
         die();
     }
     
+    // Sletter et sparemål.
     if ($action == 4) {
         if (isset($request->account_id)) {
             $account_id = $request->account_id;
@@ -99,6 +117,7 @@ if (isset($postdata)) {
         echo removeGoalAcc(3, $account_id);
     }
     
+    // Sjekker login.
     if ($action == 5) {
         if (isset($request->email)) {
             $email = $request->email;
@@ -109,6 +128,7 @@ if (isset($postdata)) {
         echo checkLogin($email, $pass);
     }
     
+    // Sjekker og registrer en ny bruker.
     if ($action == 6) {
         if (isset($request->email)) {
             $email = $request->email;
@@ -128,13 +148,13 @@ if (isset($postdata)) {
         echo registerUser($email, $pass, $passrep, $name, $ssn);
     }
     
-    
+    // Returnerer logg av alle transaksjoner.
     if ($action == 7) {
         if (isset($request->userid)) {
             $userid = $request->userid;
         }
-        $acc = getGoals($userid);
-        echo json_encode($acc);
+        $arr = getTransactions($userid);
+        echo json_encode($arr);
         die();
     }
 }
