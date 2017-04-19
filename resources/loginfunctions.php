@@ -1,6 +1,32 @@
 <?php
 
 include_once "db_con.php";
+include_once "goalfunctions.php";
+
+function getSenderAccount($userid) {
+    global $con;
+    $stmt = $con->prepare("SELECT id FROM account WHERE owner_id = ? ORDER BY id ASC LIMIT 1");
+    $stmt->bind_param("i", $id);
+    
+    $id = $userid;
+    
+    $stmt->execute();
+    
+    $stmt->store_result();
+    if ($stmt->num_rows < 1) {
+        return 0;
+        $stmt->free_result();
+        $stmt->close();
+    }
+    $stmt->bind_result($senderid);
+    
+    while ($row = $stmt->fetch()) {
+        return $senderid;
+    }
+    $stmt->free_result();
+    $stmt->close();
+    
+}
 
 function checkLogin($email, $password) {
     global $con;
@@ -46,7 +72,30 @@ function registerUser($email, $password, $passwordrep, $name, $ssn) {
     $stmt->execute();
     $stmt->free_result();
     $stmt->close();
+    
+    $userid = checkLogin($email, $password);
+    
+    createDummyAccount($userid);
+    
+    createGoal($userid, "Spar 10 kr.", 10);
+    
     return "Registrert!";
+}
+
+function createDummyAccount($userid) {
+    global $con;
+    
+    $stmt = $con->prepare("INSERT INTO account (owner_id, amount, name) VALUES (?, ?, ?)");
+    $stmt->bind_param("ids", $userid, $amount, $goalname);
+    
+    $userid = $userid;
+    $amount = 2000;
+    $goalname = "Main";
+    
+    $stmt->execute();
+    
+    $stmt->free_result();
+    $stmt->close();
 }
 
 ?>

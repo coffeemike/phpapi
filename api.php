@@ -64,8 +64,8 @@ if (isset($postdata)) {
         if (isset($request->amount)) {
             $amount = $request->amount;
         }
-        if (isset($request->sender)) {
-            $sender = $request->sender;
+        if (isset($request->userid)) {
+            $userid = $request->userid;
         }
         if (isset($request->reciever)) {
             $reciever = $request->reciever;
@@ -75,8 +75,10 @@ if (isset($postdata)) {
             echo "Vennligst skriv inn hvor mye du vil spare.";
             return 0;
         }
+        
+        $sender = getSenderAccount($userid);
         // Kjører funksjonene som overfører penger.
-        echo sendMoney(3, $sender, $reciever, $amount);
+        echo sendMoney($userid, $sender, $reciever, $amount);
     }
     
     // Opprette sparemål
@@ -114,7 +116,10 @@ if (isset($postdata)) {
         if (isset($request->account_id)) {
             $account_id = $request->account_id;
         }
-        echo removeGoalAcc(3, $account_id);
+        if (isset($request->userid)) {
+            $userid = $request->userid;
+        }
+        echo removeGoalAcc($userid, $account_id);
     }
     
     // Sjekker login.

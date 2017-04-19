@@ -22,7 +22,7 @@ function createGoal($userid, $goaldesc, $goalamount) {
 // Henter ut alle goals basert på brukerid.
 function getGoals($userid) {
     global $con;
-    $usid = mysqli_real_escape_string($con, $userid);
+    $usid = $userid;
     $sql = "SELECT account.id AS id, goals.goal_name AS name, goals.goal AS goal, account.amount AS oppspart FROM goals JOIN account ON goals.account_id = account.id WHERE account.owner_id = '$usid'";
 
     $res = mysqli_query($con, $sql);
