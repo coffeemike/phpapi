@@ -212,8 +212,6 @@ function checkOwner($userid, $accountid) {
     
     while ($row = $stmt->fetch()) {
         if ($dbamount > 0) {
-            //$stmt = $con->prepare("UPDATE account(3) SET amount = amount + $dbamount WHERE owner_id = 4");
-            //$stmt->execute();
             return 1;
         }
     }
