@@ -1,0 +1,112 @@
+[10-Mar-2017 14:34:27 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[10-Mar-2017 14:34:29 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[10-Mar-2017 14:34:36 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[10-Mar-2017 14:34:39 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 09:45:11 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:11 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:11 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 8
+[18-Apr-2017 09:45:11 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 9
+[18-Apr-2017 09:45:14 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:14 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:14 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 8
+[18-Apr-2017 09:45:14 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 9
+[18-Apr-2017 09:45:18 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:18 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:18 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 8
+[18-Apr-2017 09:45:18 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 9
+[18-Apr-2017 09:45:24 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:24 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:24 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:24 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:24 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 8
+[18-Apr-2017 09:45:24 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 9
+[18-Apr-2017 09:45:24 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 8
+[18-Apr-2017 09:45:24 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 9
+[18-Apr-2017 09:45:25 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:25 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:25 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 34
+[18-Apr-2017 09:45:25 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 35
+[18-Apr-2017 09:45:28 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:28 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:45:29 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 34
+[18-Apr-2017 09:45:29 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 35
+[18-Apr-2017 09:46:16 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:16 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:16 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 34
+[18-Apr-2017 09:46:16 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 35
+[18-Apr-2017 09:46:17 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:17 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:17 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 34
+[18-Apr-2017 09:46:17 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 35
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 34
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 35
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 34
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 35
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 34
+[18-Apr-2017 09:46:18 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 35
+[18-Apr-2017 09:46:33 Europe/Oslo] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:33 Europe/Oslo] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/affeno/public_html/prosjekt/resources/db_con.php on line 5
+[18-Apr-2017 09:46:33 Europe/Oslo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 34
+[18-Apr-2017 09:46:33 Europe/Oslo] PHP Fatal error:  Call to a member function bind_param() on null in /home/affeno/public_html/prosjekt/resources/loginfunctions.php on line 35
+[18-Apr-2017 10:14:53 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:15:11 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:16:56 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:17:08 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:17:42 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:17:52 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:18:25 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:18:41 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:19:57 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:19:58 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:20:11 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:20:12 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:20:25 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:20:26 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:24:23 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:24:24 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:24:44 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 10:24:45 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 13:37:31 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[18-Apr-2017 13:37:32 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 11:26:57 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:18:26 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:18:29 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:18:55 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:19:29 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:19:32 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:19:52 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:19:59 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:21:59 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:22:12 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:22:15 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:22:55 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:22:59 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:28:46 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:28:48 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:28:59 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:30:15 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:30:44 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:31:13 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:34:04 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:39:05 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:43:13 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:43:14 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:43:47 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:44:04 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:46:07 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:46:23 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:47:03 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:47:08 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:47:19 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:48:30 Europe/Oslo] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/affeno/public_html/prosjekt/resources/goalfunctions.php on line 25
+[19-Apr-2017 12:48:53 Europe/Oslo] PHP Fatal error:  Cannot use [] for reading in /home/affeno/public_html/prosjekt/resources/achifunctions.php on line 34
+[19-Apr-2017 12:49:03 Europe/Oslo] PHP Fatal error:  Cannot use [] for reading in /home/affeno/public_html/prosjekt/resources/achifunctions.php on line 34
+[19-Apr-2017 12:50:34 Europe/Oslo] PHP Fatal error:  Cannot use [] for reading in /home/affeno/public_html/prosjekt/resources/achifunctions.php on line 34
+[19-Apr-2017 12:50:36 Europe/Oslo] PHP Fatal error:  Cannot use [] for reading in /home/affeno/public_html/prosjekt/resources/achifunctions.php on line 34
+[19-Apr-2017 12:51:21 Europe/Oslo] PHP Parse error:  syntax error, unexpected '}' in /home/affeno/public_html/prosjekt/resources/achifunctions.php on line 57

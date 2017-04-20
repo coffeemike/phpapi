@@ -13,6 +13,7 @@
 */
 
 include_once "db_con.php";
+include_once "achifunctions.php";
 
 
 // Samle funksjon som går igjennom alle stega for å sende penger.
@@ -28,7 +29,7 @@ function sendMoney($userid, $sender, $reciever, $amount) {
     }
     // Hvis avsender eier kontoen, sjekkes det så om han har nok penger til å sende.
     else if ($check == 1) {
-        return "Du har ikke så mye penger å sende.";
+        return "Du har ikke så mye penger på kontoen.";
     }
     // Loggfører transaksjonen i et eget table
     insertTransactions($sender, $reciever, $amount);
@@ -38,6 +39,8 @@ function sendMoney($userid, $sender, $reciever, $amount) {
     
     // Legger til penger på mottakers konto
     addMoney($reciever, $amount);
+    
+    checkAchi($userid);
     
     return $amount;
 }

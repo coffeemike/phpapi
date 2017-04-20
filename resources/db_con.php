@@ -11,4 +11,7 @@ function checkDBCon($con) {
     return 0;
 }
 
+mysqli_set_charset($con, "utf8");
+
+
 ?>
