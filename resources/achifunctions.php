@@ -202,4 +202,22 @@ function getNumDoneGoals($userid) {
     return $arr;
 }
 
+function getAllAchis($userid) {
+    global $con;
+    $usid = $userid;
+    $sql = "SELECT achievements.name AS name, achievements.description AS descri FROM achiusers JOIN achievements ON achiusers.achi_id = achievements.id WHERE achiusers.user_id = '$usid'";
+
+    $res = mysqli_query($con, $sql);
+    
+    if (mysqli_num_rows($res) < 1) {
+        return 0;
+    }
+    
+    $arr = array();
+    while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+        $arr[] = $row;
+    }
+    echo json_encode($arr);
+}
+
 ?>

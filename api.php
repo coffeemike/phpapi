@@ -162,6 +162,14 @@ if (isset($postdata)) {
         echo json_encode($arr);
         die();
     }
+    
+    if ($action == 8) {
+        if (isset($request->userid)) {
+            $userid = $request->userid;
+        }
+        $arr = getAllAchis($userid);
+        echo json_encode($arr);
+    }
 }
 else {
     echo "En feil oppstod!";

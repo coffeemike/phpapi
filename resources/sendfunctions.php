@@ -21,6 +21,10 @@ include_once "achifunctions.php";
 function sendMoney($userid, $sender, $reciever, $amount) {
     global $con;
     
+    if ($amount < 1) {
+        return "Vennligst skriv et positivt tall.";
+    }
+    
     $check = checkOwnerCash($userid, $sender, $amount);
     // Return verdien til variabelen over lagres.
     // Sjekker om avsender eier kontoen det sendes penger fra.
