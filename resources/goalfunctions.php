@@ -103,6 +103,8 @@ function insertGoal($account, $goalname, $amount) {
 
 //Under denne linjen begynner funksjonene for å slette kontoer og mål.
 
+// Samlefunksjon for å slette et sparemål
+
 function removeGoalAcc($userid, $accountid) {
     $checkOwner = checkOwner($userid, $accountid);
     if ($checkOwner == 0) {
@@ -120,12 +122,14 @@ function removeGoalAcc($userid, $accountid) {
     return "Slettet!";
 }
 
+// Refunderer penger fra konto som slettes til main konto.
 function refundMoney($userid, $accountid, $amount) {
     $owneracc = getMainAccount($userid);
     var_dump($owneracc);
     sendMoney($userid, $accountid, $owneracc, $amount);
 }
 
+// Henter ut en brukers hovedkonto
 function getMainAccount($userid) {
     global $con;
     
@@ -144,6 +148,7 @@ function getMainAccount($userid) {
     
 }
 
+// Henter ut antall kroner på en konto basert på id.
 function getAccountMoney($accountid) {
     global $con;
     
@@ -166,6 +171,7 @@ function getAccountMoney($accountid) {
     
 }
 
+// Sletter konto fra account table.
 function deleteAccount($accountid) {
     global $con;
     
@@ -178,6 +184,7 @@ function deleteAccount($accountid) {
     $stmt->close();
 }
 
+// Sletter goal fra goals table.
 function deleteGoal($account_id) {
     global $con;
 
@@ -194,6 +201,11 @@ function deleteGoal($account_id) {
     
 }
 
+// Sjekker om det brukerid og konto har samme eier.
+// Sjekker om det er mere enn 0 kroner på konto. Da må penger refunderes.
+// Return 0 = Eier stemmer ikke
+// Return 1 = Penger på konto
+// Return 2 = Ingen penger på konto.
 function checkOwner($userid, $accountid) {
     global $con;
     

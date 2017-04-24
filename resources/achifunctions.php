@@ -1,16 +1,20 @@
 <?php
 
 /*
-* 
-* Function must be looped to check every single achievement every time it runs.
-* 
-* 
+*
+* Funksjoner som omgår registrering av achievements o.l
+*
+*   @param $userid = Referanse til en bruker
+*   @param $achiid = id som refererer til et achievement i databasen
+*
 */
 
 include_once "db_con.php";
 include_once "goalfunctions.php";
 
-// Main func to use other funcs.
+// Hovedfunksjon som kjøres etter en transaksjon
+// Sjekker om noen nye achievements er oppnådd.
+// Hvis så, legges det inn i databasen. Uten duplikater.
 function checkAchi($userid) {
     global $con;
     $accinfo = getAccInfo($userid);
@@ -23,8 +27,10 @@ function checkAchi($userid) {
     if (mysqli_num_rows($res) < 1) {
         return 0;
     }
+    // Looper igjennom alle achievementsa.
     while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
         
+        // Type 1 betyr at en pengesum er kravet for å oppnå achievementet.
         if ($row['type'] == 1) {
             for ($i = 0; $i < sizeof($accinfo); $i++) {
                 if ($accinfo[$i]['oppspart'] >= $row['trigger_amount']) {
@@ -42,6 +48,7 @@ function checkAchi($userid) {
             }
         }
         
+        // Type 2 betyr en viss prosent må oppnås for å få achievementet.
         if ($row['type'] == 2) {
             $donegoal = 0;
             for ($i = 0; $i < sizeof($accinfo); $i++) {
@@ -79,6 +86,10 @@ function checkAchi($userid) {
         }
         
     }
+    
+    // "Type 3"
+    // Går ut på antall achievements oppnådd.
+    // $donegoal = antall achievements oppnådd totalt. 
     if ($donegoal >= 1) {
         if (checkAlreadyOwned($userid, 10) == 0) {
             insertAchiUser($userid, 10);
@@ -119,13 +130,9 @@ function checkAchi($userid) {
     }
 }
 
-function getAchievements() {
-    global $con;
-    
-}
 
-// Check if achi is already owned by the user.
-// 1 = already owned, 0 = not owned
+// Sjekker om achien allerede er oppnådd, for å unngå duplikater.
+// 1 = alt oppnådd, 0 = ikke oppnådd
 function checkAlreadyOwned($userid, $achiid) {
     global $con;
     
@@ -148,7 +155,7 @@ function checkAlreadyOwned($userid, $achiid) {
     $stmt->close();
 }
 
-// Get info like whats the goal, and how much saved. 
+// Henter ut informasjon om et sparemål. Brukes for å sammenlikne med achievementsa. 
 function getAccInfo($userid) {
     global $con;
     $usid = $userid;
@@ -167,7 +174,7 @@ function getAccInfo($userid) {
     return $arr;
 }
 
-// Inserts the achievement to the achi table.
+// Legger achien inn i databasen med referanse til achien og brukeren.
 function insertAchiUser($userid, $achiid) {
     global $con;
     
@@ -183,25 +190,7 @@ function insertAchiUser($userid, $achiid) {
     $stmt->close();
 }
 
-function getNumDoneGoals($userid) {
-    global $con;
-    
-    $usid = $userid;
-    $sql = "SELECT ";
-
-    $res = mysqli_query($con, $sql);
-    
-    if (mysqli_num_rows($res) < 1) {
-        return 0;
-    }
-    
-    $arr = array();
-    while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
-        $arr[] = $row;
-    }
-    return $arr;
-}
-
+// Henter ut navn og beskrivelse av achien som sendes til achi logg på mobilappen.
 function getAllAchis($userid) {
     global $con;
     $usid = $userid;

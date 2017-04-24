@@ -10,6 +10,7 @@
 * 5 = Sjekker login
 * 6 = Sjekker registrering
 * 7 = Henter ut alle transaksjoner til en person.
+* 8 = Henter ut oppnådde achievements.
 *
 */
 
@@ -163,6 +164,7 @@ if (isset($postdata)) {
         die();
     }
     
+    // Returnerer alle achievements oppnådd.
     if ($action == 8) {
         if (isset($request->userid)) {
             $userid = $request->userid;

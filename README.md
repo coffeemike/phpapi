@@ -18,7 +18,7 @@ Example: echo getGoals(3);
 
 ## Authors
 
-* **Alf Henrik Langaas**
+* ***Alf Henrik Langaas***
 * **Mikkel Fjeld**
 * **Erlend Birketvedt**
 

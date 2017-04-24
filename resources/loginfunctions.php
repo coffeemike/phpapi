@@ -1,8 +1,22 @@
 <?php
 
+/*
+*
+* Login og registreringsfunksjoner hovedsaklig.
+*
+*   @param $userid = Referanse til en bruker
+*   @param $email = Email til login/register
+*   @param $pass = Passord til login/register
+*   @param $passrep = Passord repetert i register
+*   @param $name = Navn til register.
+*   @param $ssn = "Social Security Number" = Fødselsnummer til register. 
+*
+*/
+
 include_once "db_con.php";
 include_once "goalfunctions.php";
 
+// Henter ut en brukers første konto, som tilsvarer avsenderkonto.
 function getSenderAccount($userid) {
     global $con;
     $stmt = $con->prepare("SELECT id FROM account WHERE owner_id = ? ORDER BY id ASC LIMIT 1");
@@ -28,6 +42,7 @@ function getSenderAccount($userid) {
     
 }
 
+// Sjekker om logininfo stemmer. Hvis det ikke stemmer, returneres 0.
 function checkLogin($email, $password) {
     global $con;
     
@@ -54,6 +69,7 @@ function checkLogin($email, $password) {
     $stmt->close();
 }
 
+// Registrerer en ny brukerkonto og oppretter dummy konto og sparemål.
 function registerUser($email, $password, $passwordrep, $name, $ssn) {
     global $con;
     
@@ -77,11 +93,14 @@ function registerUser($email, $password, $passwordrep, $name, $ssn) {
     
     createDummyAccount($userid);
     
+    // Oppretter et sparemål som en slags "Tutorial".
     createGoal($userid, "Spar 10 kr.", 10);
     
     return "Registrert!";
 }
 
+// Oppretter en dummy konto når man registrerer seg som inneholder 2000 kr.
+// Brukes for enkelt å kunne demonstrere løsningen og teste løsningen.
 function createDummyAccount($userid) {
     global $con;
     

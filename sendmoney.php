@@ -1,5 +1,12 @@
 <?php
 
+/*
+*
+* IKKE I BRUK
+* Ble brukt som første utkast til testing.
+*
+*/
+
 $con = mysqli_connect('knarbakk.asuscomm.com', 'knarbakk', 'knarbakk_database_for_blog', 'dnb');
 
 if (!$con) {

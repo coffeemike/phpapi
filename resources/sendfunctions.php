@@ -102,6 +102,12 @@ function addMoney($reciever, $amount) {
     $stmt->close();
 }
 
+// Multifunksjon
+// Sjekker først om brukerid og konto stemmer. Altså om brukeren eier kontoen.
+// Sjekker om input amount (penger) på konto er større enn i databasen.
+// Return 0 = Eier ikke konto
+// Return 1 = Prøver å sende mer enn man har
+// Return 2 = All good, nok penger på konto og eier stemmer.
 function checkOwnerCash($userid, $sender, $amount) {
     global $con;
     
@@ -130,6 +136,9 @@ function checkOwnerCash($userid, $sender, $amount) {
     return 2;
 }
 
+// Ikke i bruk pdd.
+// Returnerer alle transaksjoner en bruker har.
+// Returnerer id, fraKonto, tilKonto og antall kroner.
 function getTransactions($userid) {
     global $con;
     $usid = mysqli_real_escape_string($con, $userid);
